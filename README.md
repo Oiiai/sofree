@@ -13,9 +13,9 @@
 # 本项目纯属娱乐，所有内容（包括文本匹配、图片及特效）均为虚构。请勿将本工具用于任何恶意攻击或侵犯他人权益的行为，使用者需自行承担相关责任。
 
 ## 截图
-![](https://raw.githubusercontent.com/Oiiai/sofree/main/screenshot/1.png)
+![截图1](https://raw.githubusercontent.com/Oiiai/sofree/main/screenshot/1.png)
 
-![](https://raw.githubusercontent.com/Oiiai/sofree/main/screenshot/2.png)
+![截图2](https://raw.githubusercontent.com/Oiiai/sofree/main/screenshot/2.png)
 
 ## 如何使用
 
