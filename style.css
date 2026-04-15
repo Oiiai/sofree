@@ -1,0 +1,189 @@
+@font-face {
+    font-family: fnt;
+    src: local('Segoe UI'), local('PingFang SC'), local('Microsoft YaHei');
+    font-display: swap;
+}
+
+::selection {
+    color: white;
+    background-color: black;
+}
+
+* {
+    font-family: fnt, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #fff9f2 0%, #fff4e8 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    position: relative;
+}
+
+/* ----------------------------------------------------- */
+.page {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    background-color: rgba(255, 247, 236, 0.85);
+    backdrop-filter: blur(4px);
+    margin: 0 0 1.5rem 0;
+    padding: 0.85rem 1.8rem;
+    border: 1px solid #ffe1bf;
+    border-radius: 60px;
+    display: flex;
+    gap: 1.2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+
+nav .nav-a {
+    margin: 0;
+    color: rgb(99, 88, 75);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.nav-a:hover {
+    color: black;
+    font-weight: 600;
+    transform: translateY(-1px);
+}
+
+.main {
+    background-color: rgb(255, 247, 236);
+    margin: 0;
+    padding: 2rem;
+    border: 1px solid #ffe1bf;
+    border-radius: 32px;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s;
+}
+
+.main .main-title {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #3b2c1f;
+    font-size: 1.8rem;
+    letter-spacing: -0.3px;
+}
+
+/* 输入框和输出在同一行 */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.main .box {
+    flex: 2;
+    height: 3rem;
+    padding: 0 1.2rem;
+    border: 2px solid #ffe0c0;
+    border-radius: 48px;
+    font-size: 1rem;
+    background: white;
+    outline: none;
+    transition: all 0.2s ease;
+    color: #2c241a;
+}
+
+.main .box:focus {
+    border-color: #d4b48c;
+    box-shadow: 0 0 0 3px rgba(210, 170, 120, 0.2);
+}
+
+.output {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #bf7f3f;
+    background: #fff1e2;
+    padding: 0.5rem 1rem;
+    border-radius: 48px;
+    transition: all 0.15s;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+/* 图片显示区域 - 默认隐藏，宽度与 nav/main 对齐 */
+.pic-show {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 247, 236);
+    border: 1px solid #ffe1bf;
+    border-radius: 32px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* 图片显示状态 */
+.pic-show.show {
+    display: flex;
+}
+
+/* 图片样式 - 保持比例，宽度自适应父容器 */
+.pic {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 24px;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.pic:hover {
+    transform: scale(1.02);
+}
+
+/* 淡入上升动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 彩带容器 */
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* 彩带样式 */
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 20px;
+}
